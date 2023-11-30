@@ -1,0 +1,49 @@
+<div class="screen">
+    <div class="title">
+      <h1>Sleepiness Tracker</h1>
+    </div>
+
+    <ion-card class="button-container">
+      <div class="range">
+        <ion-range aria-label="Stanford Sleepiness Range" [pin]="true" [ticks]="true" [snaps]="true" [min]="1" [max]="7" color="black" [(ngModel)]="this.scale">
+        </ion-range>
+      </div>
+      <div class="range-container">
+          <div class="range-text">
+            <p>{{ this.data[scale] }}</p>
+          </div>
+      </div>
+      <div class="submit-container">
+        <button class="submit-button" (click)="addToLog()">Submit</button>
+      </div>
+      <div *ngIf="added">
+        Logged!
+      </div>
+    </ion-card>
+
+
+
+   
+    <!-- <a href="/home">
+      <button class="back">
+        Home
+      </button>
+    </a> -->
+
+
+</div>
+
+<ion-tab-bar class="tab-bar" slot="bottom">
+  <a class="tab-button1" href="/home">
+    <ion-tab-button >
+      <ion-icon name="home"></ion-icon>
+      Home
+    </ion-tab-button>
+  </a>
+  <a class="tab-button2" href="/overnight-log">
+    <ion-tab-button>
+      <ion-icon name="cloudy"></ion-icon>
+      Logs
+    </ion-tab-button>
+  </a>
+</ion-tab-bar>

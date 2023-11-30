@@ -1,0 +1,153 @@
+ion-range::part(pin) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    color: black;
+
+    border-radius: 50%;
+    transform: scale(1.01);
+
+    top: -20px;
+
+    min-width: 28px;
+    height: 28px;
+    transition: transform 120ms ease, background 120ms ease;
+}
+
+ion-range::part(pin)::before {
+    color: black;
+  }
+
+ion-range::part(knob) {
+    background: black;
+  }
+
+  ion-range::part(tick) {
+    background: black;
+  }
+  
+  ion-range::part(tick-active) {
+    background: black;
+  }
+
+  ion-range::part(knob) {
+    background: black;
+  }
+  
+  ion-range::part(bar) {
+    background: lightblue;
+  }
+  
+  ion-range::part(bar-active) {
+    background: lightblue;
+  }
+
+  .range-text {
+    position: relative;
+    text-align: center;
+    bottom: 20px; /* Adjust this value as needed */
+  }
+
+  .range-container{
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .range {
+    width: 80%; /* Adjust the width as needed */
+    margin: 0 auto;
+  }
+
+  .submit, .back{
+  font-size: 20px;
+  text-decoration: none;
+  color: white; /* Set text color to contrast with the background */
+  background-color: blue;
+  border: none; /* Remove default button border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 10px; /* Adjust the value to change the roundness of the button */
+  display: inline-block; /* Ensure buttons appear inline */
+}
+
+.submit {
+    margin-bottom: 10px;
+}
+
+.screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    height: 100vh;
+    background-color: white;
+
+  }
+
+.inner-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title h1{
+  font-size: 60px;
+  color: black;
+}
+
+.tab-bar{
+  padding-top:12px;
+  padding-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.tab-button1{
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.tab-button2{
+  text-decoration: none;
+  margin-left: 60px;
+}
+
+.button-container {
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.107);
+  width: 85%; /* Adjust the width as needed */
+  height: 40%; /* Adjust the height as needed */
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.submit-button {
+  width: 200px;
+  height: 40px;
+  background-color: #3880ff;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px; /* Adjust the border-radius to control the curvature */
+  margin-top: 20px;
+}
+
+.submit-container{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}

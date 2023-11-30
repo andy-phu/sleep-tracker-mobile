@@ -1,0 +1,88 @@
+.button-container {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.107);
+    width: 85%; /* Adjust the width as needed */
+    height: 40%; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+  
+  
+.button-container h3{
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title h1{
+    font-size: 70px;
+    color: black;
+}
+
+.submit-button {
+    width: 140px;
+    height: 40px;
+    background-color: #3880ff;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px; /* Adjust the border-radius to control the curvature */
+    margin-top: 20px;
+    color:white;
+}
+
+.submit-container{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+
+ion-datetime-button::part(native){
+    background: #3880ff;
+    height: 40px;
+    width: 130px;
+    font-size: 16px;
+    font-weight: bold;
+    --ion-text-color:white;
+}
+
+.screen{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color:  rgba(255, 255, 255, 0.85);
+}
+  
+.tab-button1{
+    text-decoration: none;
+    margin-right: 40px;
+}
+  
+.tab-button2{
+    text-decoration: none;
+    margin-left: 60px;
+}
+

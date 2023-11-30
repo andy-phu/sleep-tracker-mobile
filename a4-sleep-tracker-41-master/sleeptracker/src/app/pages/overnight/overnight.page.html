@@ -1,0 +1,66 @@
+<div class="screen">
+  <div class="title">
+    <h1>Overnight</h1>
+  </div>
+
+
+
+  <ion-card class="button-container">
+    <h3>Sleep</h3>
+    <ion-datetime-button style="color:blue" class="ion-button" dateTime="start" [(ngModel)]="start"></ion-datetime-button>
+    <h3>Wake Up</h3>
+    <ion-datetime-button class="ion-button" dateTime="end" [(ngModel)]="end"></ion-datetime-button>
+    <div class="submit-container">
+      <button class="submit-button" (click)="addOvernightSleep()">Submit</button>
+    </div>
+    <div *ngIf="added">
+      Logged!
+    </div>
+  </ion-card>
+
+
+
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime [(ngModel)]="start" id="start"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime [(ngModel)]="end" id="end"></ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+
+  <!-- <ion-item>
+    <button (click)="showOvernightLog()">Show Sleep Log</button>
+  </ion-item>
+  
+  <ion-item>
+    <button (click)="clearOvernightLog()">Clear Sleep Log</button>
+  </ion-item> -->
+  <!-- <ion-item>
+    <a href="/home">
+      <button>Home Page</button>
+    </a>
+  </ion-item> -->
+
+  
+</div>
+
+<ion-tab-bar class="tab-bar" slot="bottom">
+  <a class="tab-button1" href="/home">
+    <ion-tab-button >
+      <ion-icon name="home"></ion-icon>
+      Home
+    </ion-tab-button>
+  </a>
+  <a class="tab-button2" href="/overnight-log">
+    <ion-tab-button>
+      <ion-icon name="cloudy"></ion-icon>
+      Logs
+    </ion-tab-button>
+  </a>
+</ion-tab-bar>

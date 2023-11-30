@@ -1,0 +1,54 @@
+
+<ion-header collapse="fade">
+  <ion-toolbar>
+    <ion-button color="primary" href="/home">
+      <ion-icon name="home"></ion-icon>
+    </ion-button>
+
+    <ion-segment value="all" (ionChange)="segmentChanged($event)" color="primary">
+      <ion-segment-button value="overnight">
+        <ion-label>Overnight Log</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="sleepiness">
+        <ion-label>Sleepiness Log</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ng-container *ngIf="selectedSegment === 'overnight'">
+    <ion-list>
+      <ion-card class="segs" *ngFor="let obj of overNightArr" color="primary">
+        <ion-card-header>
+            <ion-card-title class="entries">You slept for {{ obj.difference }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="disc">
+          Start: {{obj.start}} <br>
+          End: {{obj.end}}
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-container>
+
+  <ng-container *ngIf="selectedSegment === 'sleepiness'">
+    <ion-list>
+      <ion-card class="segs" *ngFor="let obj of sleepinessArr" color="primary">
+        <ion-card-header>
+            <ion-card-title class="entries">At {{ obj.time }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content class="disc">
+          You felt: {{obj.feeling}}
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+  </ng-container>
+</ion-content>
+
+<ion-footer collapse="fade">
+  <ion-toolbar>
+    <ion-button class="foot" (click)="clearLog()" color="primary">Clear Log</ion-button>
+    <ion-button class="foot" href="/overnight" color="primary">Record Sleep</ion-button>
+    <ion-button class="foot" href="/sleepiness" color="primary">Record Sleepiness</ion-button>
+  </ion-toolbar>
+</ion-footer>

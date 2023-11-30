@@ -1,0 +1,52 @@
+.title{
+  font-size: 52px;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+.overnight-button{
+  margin-bottom: 15px;
+}
+
+.log-button,
+.overnight-button,
+.day-button {
+  font-size: 26px;
+  text-decoration: none;
+  color: white; 
+  background-color: #3880ff;
+  border: none; 
+  width: 350px;
+  height: 60px;
+  padding: 10px; 
+  border-radius: 10px; 
+  display: inline-block; 
+  font-weight: bold;
+}
+
+
+.inner-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  background-color: white;
+}
+
+.tab-bar{
+  padding-top:12px;
+  padding-bottom: 12px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.tab-button1{
+  text-decoration: none;
+  margin-right: 40px;
+}
+
+.tab-button2{
+  text-decoration: none;
+  margin-left: 60px;
+}
